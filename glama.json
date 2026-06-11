@@ -1,0 +1,59 @@
+{
+  "$schema": "https://glama.ai/mcp/schemas/1.0.0/server.json",
+  "name": "elimu-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Kenya education system \u2014 school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources. 5 tools.",
+  "license": "MIT",
+  "author": {
+    "name": "Gabriel Mahia",
+    "email": "contact@aikungfu.dev",
+    "url": "https://gabrielmahia.github.io"
+  },
+  "tools": [
+    {
+      "name": "school_finder",
+      "description": "Find government or private schools in a Kenya county by level (primary/secondary/TVET).",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true
+      }
+    },
+    {
+      "name": "exam_results_guide",
+      "description": "Guide to accessing KCPE and KCSE results, grading system, and cluster points. DEMO.",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true
+      }
+    },
+    {
+      "name": "helb_loan_info",
+      "description": "HELB loan eligibility, application process, repayment terms, and loan types for Kenyan students.",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true
+      }
+    },
+    {
+      "name": "tvet_programs",
+      "description": "Query TVET programs available in Kenya by trade, county, or institution. Returns NQF level and duration.",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true
+      }
+    },
+    {
+      "name": "literacy_resources",
+      "description": "Kenya Adult Education resources, literacy programs, and continuing education pathways.",
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true
+      }
+    }
+  ]
+}
