@@ -3,7 +3,7 @@ from __future__ import annotations
 from typing import Optional
 from fastmcp import FastMCP
 
-mcp = FastMCP(name="elimu-mcp", description="Kenya education system navigation. DEMO data only.")
+mcp = FastMCP(name="elimu-mcp", instructions="Kenya education system navigation. DEMO data only.")
 
 @mcp.tool(name="school_finder", description="Find schools in a Kenya county by level. DEMO.")
 def school_finder(county: str, level: Optional[str] = "secondary", school_type: Optional[str] = None) -> dict:
