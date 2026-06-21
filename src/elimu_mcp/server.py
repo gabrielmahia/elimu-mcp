@@ -1,12 +1,12 @@
 """ElimuMCP — Kenya Education System Navigation (5 tools). All data DEMO."""
 from __future__ import annotations
-from typing import Optional
+from typing import Annotated, Optional
 from fastmcp import FastMCP
 
 mcp = FastMCP(name="elimu-mcp", instructions="Kenya education system navigation. DEMO data only.")
 
-@mcp.tool(name="school_finder", description="Find schools in a Kenya county by level. DEMO.")
-def school_finder(county: str, level: Optional[str] = "secondary", school_type: Optional[str] = None) -> dict:
+@mcp.tool(name="school_finder", description="Find schools in a Kenya county by level. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def school_finder(county: str, level: Optional[str] = "secondary", school_type: Annotated[Optional[str], "Optional filter for school type. Pass None to return all results."] = None) -> dict:
     levels = {"primary": "Standard 1-8, KCPE at end", "secondary": "Form 1-4, KCSE at end",
               "tvet": "6 months–3 years, NQF Level 2-5", "university": "3-4 year degree programs"}
     sample = [{"name": f"{county} High School", "level": level, "type": "public", "county": county, "board": "TSC/MOE"},
@@ -18,8 +18,8 @@ def school_finder(county: str, level: Optional[str] = "secondary", school_type: 
             "level_description": levels.get(level.lower(), "See nemis.go.ke"),
             "sample_schools": sample, "full_registry": "nemis.go.ke — National Education Management Information System"}
 
-@mcp.tool(name="exam_results_guide", description="Guide to KCPE/KCSE results, grading, and cluster points. DEMO.")
-def exam_results_guide(exam: str, concern: Optional[str] = None) -> dict:
+@mcp.tool(name="exam_results_guide", description="Guide to KCPE/KCSE results, grading, and cluster points. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def exam_results_guide(exam: str, concern: Annotated[Optional[str], "Optional filter for concern. Pass None to return all results."] = None) -> dict:
     GUIDE = {
         "kcpe": {"full_name": "Kenya Certificate of Primary Education", "marks": "500 total (5 subjects × 100)",
                  "grading": "A–E grades. Grade A = 400+. Used for Form 1 placement.",
@@ -35,7 +35,7 @@ def exam_results_guide(exam: str, concern: Optional[str] = None) -> dict:
     return {"source": "DEMO — knec.ac.ke for official results", "exam": exam, **data,
             "official": "knec.ac.ke", "university_admissions": "kuccps.net"}
 
-@mcp.tool(name="helb_loan_info", description="HELB loan eligibility, application, and repayment. DEMO.")
+@mcp.tool(name="helb_loan_info", description="HELB loan eligibility, application, and repayment. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def helb_loan_info(query: str, student_type: Optional[str] = "undergraduate") -> dict:
     INFO = {
         "eligibility": "Kenyan citizen, enrolled in accredited university or TVET, not in default.",
@@ -51,8 +51,8 @@ def helb_loan_info(query: str, student_type: Optional[str] = "undergraduate") ->
             "student_type": student_type, "information": matched or INFO,
             "official": "helb.co.ke", "disclaimer": "Verify all amounts at HELB — rates change annually."}
 
-@mcp.tool(name="tvet_programs", description="TVET programs available in Kenya by trade or county. DEMO.")
-def tvet_programs(trade: Optional[str] = None, county: Optional[str] = None) -> dict:
+@mcp.tool(name="tvet_programs", description="TVET programs available in Kenya by trade or county. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def tvet_programs(trade: Annotated[Optional[str], "Optional filter for trade. Pass None to return all results."] = None, county: Annotated[Optional[str], "County to list TVET institutions in."] = None) -> dict:
     PROGRAMS = [
         {"trade": "electrical", "nqf_level": 4, "duration": "2 years", "qualification": "Craft Certificate",
          "provider": "National Polytechnic or Accredited TVET"},
@@ -72,8 +72,8 @@ def tvet_programs(trade: Optional[str] = None, county: Optional[str] = None) -> 
     return {"source": "DEMO — tveta.go.ke for full registry", "trade_query": trade, "county": county,
             "programs": PROGRAMS, "accreditation": "tveta.go.ke", "helb": "TVET students eligible for HELB"}
 
-@mcp.tool(name="literacy_resources", description="Adult education, literacy programs, and continuing education in Kenya. DEMO.")
-def literacy_resources(county: Optional[str] = None, age_group: Optional[str] = "adult") -> dict:
+@mcp.tool(name="literacy_resources", description="Adult education, literacy programs, and continuing education in Kenya. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
+def literacy_resources(county: Annotated[Optional[str], "Optional filter for county. Pass None to return all results."] = None, age_group: Optional[str] = "adult") -> dict:
     return {"source": "DEMO — literacy.go.ke", "county": county, "age_group": age_group,
             "programs": [
                 {"name": "Kenya Literacy Programme", "provider": "Ministry of Education", "target": "Adults 15+",
