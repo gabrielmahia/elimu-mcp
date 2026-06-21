@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "elimu-mcp"
-version = "0.1.2"
+version = "0.1.3"
 description = "MCP server for Kenya education system — school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources. 5 tools."
 readme = "README.md"
 license = { text = "MIT" }
