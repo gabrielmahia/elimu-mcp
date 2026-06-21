@@ -74,6 +74,7 @@ def tvet_programs(trade: Annotated[Optional[str], "Optional filter for trade. Pa
 
 @mcp.tool(name="literacy_resources", description="Adult education, literacy programs, and continuing education in Kenya. DEMO.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def literacy_resources(county: Annotated[Optional[str], "Optional filter for county. Pass None to return all results."] = None, age_group: Optional[str] = "adult") -> dict:
+    """Return adult literacy programmes, non-formal education resources, and learning materials in Kenya."""
     return {"source": "DEMO — literacy.go.ke", "county": county, "age_group": age_group,
             "programs": [
                 {"name": "Kenya Literacy Programme", "provider": "Ministry of Education", "target": "Adults 15+",
