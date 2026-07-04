@@ -1,4 +1,5 @@
 # elimu-mcp
+<!-- mcp-name: io.github.gabrielmahia/elimu-mcp -->
 
 [![elimu-mcp Glama score](https://glama.ai/mcp/servers/gabrielmahia/elimu-mcp/badges/score.svg)](https://glama.ai/mcp/servers/gabrielmahia/elimu-mcp)
 [![smithery badge](https://smithery.ai/badge/@gabrielmahia/elimu-mcp)](https://smithery.ai/server/@gabrielmahia/elimu-mcp)

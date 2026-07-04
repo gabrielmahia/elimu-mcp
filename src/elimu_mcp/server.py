@@ -86,3 +86,7 @@ def literacy_resources(county: Optional[str] = Field(None, description="Optional
                  "target": "Adult distance learners", "delivery": "Distance/blended"},
             ],
             "contact": "County Director of Education for local literacy centre locations."}
+
+def main() -> None:
+    """Console entry point."""
+    mcp.run()
