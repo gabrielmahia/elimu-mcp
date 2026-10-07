@@ -1,8 +1,8 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/1.0.0/server.json",
   "name": "elimu-mcp",
-  "version": "0.1.0",
-  "description": "MCP server for Kenya education system \u2014 school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources. 5 tools.",
+  "version": "0.1.5",
+  "description": "MCP server for Kenya education system — school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources",
   "license": "MIT",
   "author": {
     "name": "Gabriel Mahia",
@@ -12,7 +12,7 @@
   "tools": [
     {
       "name": "school_finder",
-      "description": "Find government or private schools in a Kenya county by level (primary/secondary/TVET).",
+      "description": "Find schools in a Kenya county by level. DEMO.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -21,7 +21,7 @@
     },
     {
       "name": "exam_results_guide",
-      "description": "Guide to accessing KCPE and KCSE results, grading system, and cluster points. DEMO.",
+      "description": "Guide to KCPE/KCSE results, grading, and cluster points. DEMO.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -30,7 +30,7 @@
     },
     {
       "name": "helb_loan_info",
-      "description": "HELB loan eligibility, application process, repayment terms, and loan types for Kenyan students.",
+      "description": "HELB loan eligibility, application, and repayment. DEMO.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -39,7 +39,7 @@
     },
     {
       "name": "tvet_programs",
-      "description": "Query TVET programs available in Kenya by trade, county, or institution. Returns NQF level and duration.",
+      "description": "TVET programs available in Kenya by trade or county. DEMO.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -48,7 +48,7 @@
     },
     {
       "name": "literacy_resources",
-      "description": "Kenya Adult Education resources, literacy programs, and continuing education pathways.",
+      "description": "Adult education, literacy programs, and continuing education in Kenya. DEMO.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -69,5 +69,8 @@
     "mcp",
     "useful-rails",
     "ai-agents"
+  ],
+  "maintainers": [
+    "gabrielmahia"
   ]
 }
