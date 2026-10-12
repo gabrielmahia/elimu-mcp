@@ -12,7 +12,7 @@
   "tools": [
     {
       "name": "school_finder",
-      "description": "Find schools in a Kenya county by level. DEMO.",
+      "description": "Return a TEMPLATE list of sample schools for a county and level: the names are generated from the county name (for example '<county> High School') and are NOT real schools; this is not a register. Use when you need to illustrate school types and levels; for real schools use NEMIS (nemis.go.ke). school_type keeps public or private samples. Returns the source label, county, level, a description of that level, the sample schools and a pointer to the full registry. Labelled DEMO. Read-only; no side effects.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -21,7 +21,7 @@
     },
     {
       "name": "exam_results_guide",
-      "description": "Guide to KCPE/KCSE results, grading, and cluster points. DEMO.",
+      "description": "Explain a Kenyan national exam (such as KCPE or KCSE): full name, marks, grading, and when and how results are released. Use when someone asks how an exam is scored or where to get results. exam is matched by name; an unrecognised exam returns an error listing the valid ones instead of another exam's guide. concern is an optional label. Returns the exam details and KNEC and KUCCPS pointers. Static summary labelled DEMO: official results are only at knec.ac.ke. Read-only; no side effects.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -30,7 +30,7 @@
     },
     {
       "name": "helb_loan_info",
-      "description": "HELB loan eligibility, application, and repayment. DEMO.",
+      "description": "HELB student loan information: eligibility, amounts, application requirements and related topics. Use when a student asks about HELB loans. Keywords in query select entries; if none match, ALL entries are returned. student_type is only echoed back. Returns the source label, query, student_type, the information, HELB's site and a reminder that amounts change annually. Figures labelled DEMO: verify at helb.co.ke. Read-only; no side effects.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -39,7 +39,7 @@
     },
     {
       "name": "tvet_programs",
-      "description": "TVET programs available in Kenya by trade or county. DEMO.",
+      "description": "List sample TVET (technical and vocational) programmes with trade, NQF level, duration, qualification and provider. Use when someone asks what technical courses exist. trade filters by matching text; county is only echoed back (no county-level data is held). Returns the source label, trade_query, county, programs and a TVETA pointer, noting that TVET students can apply for HELB. A small sample labelled DEMO: see tveta.go.ke. Read-only; no side effects.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
@@ -48,7 +48,7 @@
     },
     {
       "name": "literacy_resources",
-      "description": "Adult education, literacy programs, and continuing education in Kenya. DEMO.",
+      "description": "Adult literacy programmes and non-formal learning resources in Kenya (the Kenya Literacy Programme, the Kenya Open Learning Institute and others). Use when someone asks where adults or out-of-school youth can learn to read or finish school. county and age_group are only echoed back; the same programmes are returned for all. Returns the source label, county, age_group, programmes with provider, target and delivery, and a contact note. Static list labelled DEMO. Read-only; no side effects.",
       "annotations": {
         "readOnlyHint": true,
         "destructiveHint": false,
