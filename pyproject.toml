@@ -7,28 +7,31 @@ Datasets = "https://huggingface.co/gmahia"
 Evaluation = "https://github.com/gabrielmahia/kipimo"
 
 [build-system]
-requires = ["setuptools>=68", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "elimu-mcp"
-version = "0.1.7"
+version = "0.1.8"
 description = "MCP server for Kenya education system — school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources. 5 tools."
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Topic :: Software Development :: Libraries :: Python Modules",
-    "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
 ]
 readme = "README.md"
-license = { text = "MIT" }
+license = "MIT"
 requires-python = ">=3.10"
 dependencies = ["fastmcp>=0.9", "pydantic>=2.0"]
 keywords = ["mcp","kenya","africa","education","helb","kcse","east-africa","coordination-infrastructure"]
+license-files = ["LICENSE"]
 
 [project.scripts]
 elimu-mcp = "elimu_mcp.server:mcp.run"
