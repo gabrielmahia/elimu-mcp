@@ -1,7 +1,7 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/1.0.0/server.json",
   "name": "elimu-mcp",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "MCP server for Kenya education system — school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources",
   "license": "MIT",
   "author": {

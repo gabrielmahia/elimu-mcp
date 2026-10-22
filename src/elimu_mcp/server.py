@@ -6,7 +6,9 @@ from typing import Annotated, Optional
 from fastmcp import FastMCP
 from pydantic import Field
 
-mcp = FastMCP(name="elimu-mcp", instructions="Kenya education system navigation. DEMO data only.")
+from . import __version__
+
+mcp = FastMCP(name="elimu-mcp", version=__version__, instructions="Kenya education system navigation. DEMO data only.")
 
 @mcp.tool(name="school_finder", description="Return a TEMPLATE list of sample schools for a county and level: the names are generated from the county name (for example '<county> High School') and are NOT real schools; this is not a register. Use when you need to illustrate school types and levels; for real schools use NEMIS (nemis.go.ke). school_type keeps public or private samples. Returns the source label, county, level, a description of that level, the sample schools and a pointer to the full registry. Labelled DEMO. Read-only; no side effects.", annotations={"readOnlyHint": True, "openWorldHint": False})
 def school_finder(county: Annotated[str, Field(description="County name; used to generate the template school names.")], level: Annotated[str | None, Field(description="primary, secondary (default), tvet or university.")] = "secondary", school_type: str | None = Field(None, description="Optional filter for school type. Pass None to return all results.")) -> dict:
