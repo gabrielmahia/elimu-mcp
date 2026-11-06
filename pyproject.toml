@@ -1,4 +1,5 @@
 [project.urls]
+Issues = "https://github.com/gabrielmahia/elimu-mcp/issues"
 Homepage = "https://github.com/gabrielmahia/elimu-mcp"
 Repository = "https://github.com/gabrielmahia/elimu-mcp"
 Documentation = "https://github.com/gabrielmahia/nairobi-stack"
@@ -12,7 +13,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "elimu-mcp"
-version = "0.1.10"
+version = "0.1.11"
 description = "MCP server for Kenya education system — school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources. 5 tools."
 classifiers = [
     "Development Status :: 4 - Beta",
