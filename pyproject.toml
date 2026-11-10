@@ -13,7 +13,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "elimu-mcp"
-version = "0.1.11"
+version = "0.1.12"
 description = "MCP server for Kenya education system — school registry, KCSE/KCPE results lookup, HELB loans, TVET programs, and literacy resources. 5 tools."
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -29,7 +29,7 @@ classifiers = [
 readme = "README.md"
 license = "MIT"
 requires-python = ">=3.11"
-dependencies = ["fastmcp>=0.9", "pydantic>=2.0"]
+dependencies = ["fastmcp>=4.1.4", "pydantic>=2.5.0"]
 keywords = ["mcp","kenya","africa","education","helb","kcse","east-africa","coordination-infrastructure"]
 license-files = ["LICENSE"]
 
